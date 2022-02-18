@@ -14,7 +14,7 @@ class MovieViewSet(viewsets.ModelViewSet):
         if 'stars' in request.data:
             movie = Movie.objects.get(id=pk)
             print('movie title', movie.title)
-            
+
             response = {'message':'its working'}
             return Response (response, status=status.HTTP_200_OK)
         else:
@@ -24,3 +24,5 @@ class MovieViewSet(viewsets.ModelViewSet):
 class RatingViewSet(viewsets.ModelViewSet):
     queryset = Rating.objects.all()
     serializer_class = RatingSerializer
+
+#hello
